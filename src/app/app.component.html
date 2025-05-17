@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="logo-container">
+    <img src="assets/images/Logo.png" alt="Garima's Gallery Logo" class="logo">
+    
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+       <li><a routerLink="/cardgallery" routerLinkActive="active">Cards Gallery</a></li>
+        <li><a routerLink="/artgallery" routerLinkActive="active">Art Gallery</a></li>
+      <li><a routerLink="/workshops" routerLinkActive="active">WorkShops</a></li>
+      <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Garima's Gallery. All rights reserved.</p>
+</footer>
