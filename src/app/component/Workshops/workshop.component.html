@@ -1,6 +1,56 @@
 <div class="workshops">
-    <h1>Upcoming Workshops</h1>
-    <p>
-      Explore my exciting workshops to celebrate creativity and connect with fellow enthusiasts.
-    </p>
+  <h1>Upcoming Workshops</h1>
+  <div class="workshop-container">
+    <!-- Workshop 1 -->
+    <div class="workshop-item">
+      <img 
+        src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Workshops/Workshop-1+-Stone.jpg" 
+        alt="Stone Art Workshop Flyer" 
+        (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Workshops/Workshop-1+-Stone.jpg')" 
+        class="workshop-image"
+      />
+      <p>Stone Art Workshop on June 13th. Join me for a fun and creative session!</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQJqqTKB5Y-WPbKESLmmzWZP2Ntb6fx1DHSmbGM_BGixtkvA/viewform" target="_blank">Signup Here</a>
+    </div>
+    <!-- Workshop 2 -->
+    <div class="workshop-item">
+      <img 
+        src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Workshops/Workshop-2+Claypot.jpg" 
+        alt="Pot Painting Workshop Flyer" 
+        (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Workshops/Workshop-2+Claypot.jpg')" 
+        class="workshop-image"
+      />
+      <p>Pot Painting Workshop on June 20th. Unleash your inner artist with me!</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQJqqTKB5Y-WPbKESLmmzWZP2Ntb6fx1DHSmbGM_BGixtkvA/viewform" target="_blank">Signup Here</a>
+    </div>
+    <!-- Workshop 3 -->
+    <div class="workshop-item">
+      <img 
+        src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Workshops/Workshop-3-ClayFigures.jpg" 
+        alt="Clay Art Workshop Flyer" 
+        (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Workshops/Workshop-3-ClayFigures.jpg')" 
+        class="workshop-image"
+      />
+      <p>Clay Art Workshop on June 27th. Get your hands dirty and create magic!</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQJqqTKB5Y-WPbKESLmmzWZP2Ntb6fx1DHSmbGM_BGixtkvA/viewform" target="_blank">Signup Here</a>
+    </div>
+    <!-- Workshop 4
+    <div class="workshop-item">
+      <img 
+        src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Workshops/BottleArtFlyer.JPG" 
+        alt="Bottle Art Workshop Flyer" 
+        (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Workshops/BottleArtFlyer.JPG')" 
+        class="workshop-image"
+      />
+      <p>Bottle Art Workshop on July 11th. Transform ordinary bottles into art!</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQJqqTKB5Y-WPbKESLmmzWZP2Ntb6fx1DHSmbGM_BGixtkvA/viewform" target="_blank">Signup Here</a>
+    </div>
+  </div> -->
+
+  <!-- Lightbox Modal -->
+  <div *ngIf="isLightboxOpen" class="lightbox">
+    <img [src]="lightboxImage" alt="Workshop Flyer">
+    <button class="close-btn" (click)="closeLightbox()">Close</button>
   </div>
+</div>
+

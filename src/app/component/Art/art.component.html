@@ -1,13 +1,80 @@
 <div class="gallery">
-    <h1>Art Gallery</h1>
-    <p>"My art celebrates the beauty of folk traditions, spirituality, and our connection to nature. Explore my collection of art"</p>
-    <div class="art-container">
-      <img src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/ShriGanesh.jpg" alt="Art 1" class="art-image">
-      <img src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/FolkArt.jpg" alt="Art 2" class="art-image">
-     <img src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/SeetaVivah.jpg" alt="Art 3" class="art-image">
-     <img src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Buddha.jpg" alt="Art 4" class="art-image">
-     <img src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Bird.JPG" alt="Art 5" class="art-image">
-      <img src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Fish.jpg" alt="Art 6" class="art-image">
-     
-    </div>
+  <h1>Art Gallery</h1>
+  <p>"My art celebrates the beauty of folk traditions, spirituality, and our connection to nature. Explore my collection of art"</p>
+  
+  <div class="art-container">
+    <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/ShriGanesh.jpg" 
+      alt="Art 1" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/ShriGanesh.jpg')"
+    />
+    <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/FolkArt.jpg" 
+      alt="Art 2" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/FolkArt.jpg')"
+    />
+    <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/SeetaVivah.jpg" 
+      alt="Art 3" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/SeetaVivah.jpg')"
+    />
+    <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Buddha.jpg" 
+      alt="Art 4" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Buddha.jpg')"
+    />
+    <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Bird.jpg" 
+      alt="Art 5" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Bird.jpg')"
+    />
+    <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Fish.jpg" 
+      alt="Art 6" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Fish.jpg')"
+    />
+    <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Ganesh.jpg" 
+      alt="Art 7" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Ganesh.jpg')"
+    />
+     <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/CherryBlossom.jpg" 
+      alt="Art 8" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/CherryBlossom.jpg')"
+    />
+     <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Folk-Ganesh.jpg" 
+      alt="Art 9" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Folk-Ganesh.jpg')"
+    />
+     <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Mayur.jpg" 
+      alt="Art 10" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/Mayur.jpg')"
+    />
+     <img 
+      src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/PurlpeFlower.jpg" 
+      alt="Art 11" 
+      class="art-image" 
+      (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Art/PurlpeFlower.jpg')"
+    />
   </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div *ngIf="isLightboxOpen" class="lightbox">
+  <img [src]="lightboxImage" alt="Art">
+  <button class="close-btn" (click)="closeLightbox()">Close</button>
+</div>
+

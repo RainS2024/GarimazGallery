@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 .workshops {
     text-align: center;
     padding: 2rem;
@@ -6,13 +8,107 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
+     
+
   .workshops h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+   }
+.workshop-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
   }
+
+        .workshop-item {
+            background-color: #fff;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .workshop-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .workshop-item p {
+    margin: 10px 0;
+    font-size: 1.2rem; /* Slightly larger for elegance */
+    color: #555;
+    font-family: 'Dancing Script', cursive; /* Stylish serif font */
+    line-height: 1.6; /* Improve readability */
+    letter-spacing: 0.5px; /* Add a touch of spacing for refinement */
+}
+
+        .workshop-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .workshop-item a:hover {
+            background-color: #45a049;
+        }
   
-  .workshops p {
-    font-size: 1.2rem;
-  }
-  
+
+.workshop-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* .workshop-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+} */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border: 4px solid white;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-btn:hover {
+  background-color: #ddd;
+}
+
+        

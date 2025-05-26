@@ -7,4 +7,17 @@ import { CommonModule } from '@angular/common';
   templateUrl: './workshop.component.html',
   styleUrl: './workshop.component.css'
 })
-export class WorkshopComponent {}
+export class WorkshopComponent {
+   isLightboxOpen: boolean = false;
+  lightboxImage: string = '';
+
+  openLightbox(imageUrl: string) {
+    this.lightboxImage = imageUrl;
+    this.isLightboxOpen = true;
+  }
+
+  closeLightbox() {
+    this.isLightboxOpen = false;
+    this.lightboxImage = '';
+  }
+}
