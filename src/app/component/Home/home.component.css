@@ -1,33 +1,38 @@
 .home-page {
-    text-align: center;
-    margin: 20px;
-  }
-  
-  .branding {
-    margin-top: 30px;
-     background-color: #fff7ef;
-  }
-  
-  .branding .profile-image {
-    width: 500px; /*Adjust size as needed */
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; 
+  text-align: center;
+  margin: 20px;
+}
 
-    /*display: flex;
-    align-items: center;
-    justify-content: center; /* Centers content horizontally */
-    /* flex-wrap: wrap; Allows content to wrap on smaller screens */
-    gap: 100px; /* Space between images and other elements */
+.branding {
+  margin-top: 30px;
+  background-color: #fff7ef;
+  padding: 10px; /* Optional: Add padding for consistent spacing */
+}
+
+.branding .profile-images {
+  display: flex; /* Use flexbox for side-by-side layout */
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Align images vertically */
+  gap: 20px; /* Space between the images */
+  flex-wrap: wrap; /* Allow wrapping in smaller screens */
+  margin-top: 20px;
+}
+
+.branding .profile-image {
+  max-width: 45%; /* Adjust size to fit within the flex container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .branding .profile-images {
+    flex-direction: column; /* Stack images vertically in mobile view */
+    gap: 10px; /* Reduce space between images */
   }
-  
-  .branding h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+
+  .branding .profile-image {
+    max-width: 90%; /* Reduce size for smaller screens */
   }
-  
-  .branding p {
-    font-size: 1.2rem;
-    color: #555;
-  }
+}
