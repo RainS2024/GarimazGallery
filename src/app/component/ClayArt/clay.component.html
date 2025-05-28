@@ -9,7 +9,7 @@
         class="clay-image" 
         (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/ClayArt/ClayFrame.jpg')" 
       />
-      <p class="image-label">Clay Frame</p>
+      <p class="image-label">Customized Clay Frames- $40</p>
     </div>
     <div class="image-item">
       <img 
@@ -18,7 +18,7 @@
         class="clay-image" 
         (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/ClayArt/Clay+Mugs.jpg')" 
       />
-      <p class="image-label">Clay Mugs</p>
+      <p class="image-label">Clay Mugs- $15/each</p>
     </div>
     <div class="image-item">
       <img 
@@ -27,7 +27,7 @@
         class="clay-image" 
         (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/ClayArt/Owls.jpg')" 
       />
-      <p class="image-label">Clay Owls</p>
+      <p class="image-label">Clay Owl Photo Holder (2 owls) - $20</p>
     </div>
     <div class="image-item">
       <img 
@@ -36,7 +36,7 @@
         class="clay-image" 
         (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/ClayArt/ClayFigures.jpg')" 
       />
-      <p class="image-label">Clay Figures</p>
+      <p class="image-label">Clay Figures - $5/each </p>
     </div>
     <div class="image-item">
       <img 
@@ -45,7 +45,7 @@
         class="clay-image" 
         (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/ClayArt/Bear.jpg')" 
       />
-      <p class="image-label">Clay Bear</p>
+      <p class="image-label">Bear Photo Holder- $15</p>
     </div>
     <div class="image-item">
       <img 
@@ -54,7 +54,16 @@
         class="clay-image" 
         (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/ClayArt/Mix.jpg')" 
       />
-      <p class="image-label">Message Holder</p>
+      <p class="image-label">Message Holder-$15</p>
+    </div>
+     <div class="image-item">
+      <img 
+        src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/ClayArt/Post-it+Stand.jpg" 
+        alt="Post-It Holder" 
+        class="clay-image" 
+        (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/ClayArt/Post-it+Stand.jpg')" 
+      />
+      <p class="image-label">Post-It Stand-$20</p>
     </div>
   </div>
 </div>
@@ -65,4 +74,30 @@
   <button class="close-btn" (click)="closeLightbox()">Close</button>
 </div>
 
+  <!-- Order Button -->
+  <div class="order-button-container">
+    <button class="order-button" (click)="orderItem()">Order Now</button>
+  </div>
 
+
+  <!-- Venmo Button -->
+<div class="venmo-button-container">
+  <button class="venmo-button" (click)="openVenmo()">Pay with Venmo</button>
+</div>
+
+<!-- Zelle Button -->
+<div class="zelle-button-container">
+  <button class="zelle-button" (click)="openZelleModal()">Pay with Zelle</button>
+</div>
+
+<!-- Zelle Modal -->
+<div *ngIf="isZelleModalOpen" class="zelle-modal">
+  <div class="modal-content">
+    <h2>Pay with Zelle</h2>
+    <p>Send your payment to:</p>
+    <p><strong>Email:</strong> garima.symbiosis&#64;gmail.com</p>
+    <p><strong>Phone:</strong> +1 (424) 237-4273</p>
+    <p>Note: Please include your name and card selection in the payment notes.</p>
+    <button class="close-modal-btn" (click)="closeZelleModal()">Close</button>
+  </div>
+</div> 

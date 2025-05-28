@@ -22,6 +22,29 @@
     padding: 0 10px;
     background-color: #fff7ef;
   }
+
+  .commission-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.commission-button {
+  background-color: #4CAF50; /* Use a vibrant color */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.commission-button:hover {
+  background-color: #357b37;/* Darken on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
   
   /* .art-image {
     width: 100%;

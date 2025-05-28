@@ -3,13 +3,17 @@
   <p>Browse through my collection of unique and creative greeting cards.</p>
   <div class="card-container">
     <!-- Card Item -->
-    <div class="card-item" *ngFor="let card of cards">
+    <div class="card-item" *ngFor="let card of cards" 
+    [attr.data-tooltip]="getCardPricing(card)">
+       
       <img
         [src]="card.image"
         [alt]="card.alt"
         class="card-image"
         (click)="openLightbox(card.image)"
       />
+       <!-- Card Code Label -->
+    <div class="card-label">{{ card.code }}</div>
        <!-- Premium Tag -->
       <div *ngIf="card.isPremium" class="premium-tag">Premium</div>
     </div>
@@ -27,108 +31,28 @@
   </div>
 </div>
 
-  
-
-
-
-  
-  
-    <!-- <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/SG-1.png" 
-    alt="Greeting Card 1" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/SG-1.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/BD-1.png" 
-    alt="Greeting Card 2" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/BD-1.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/BD-2.png" 
-    alt="Greeting Card 3" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/BD-2.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-1.png" 
-    alt="Greeting Card 4" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-1.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-2.png" 
-    alt="Greeting Card 5" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-2.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-3.png" 
-    alt="Greeting Card 6" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-3.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-4.png" 
-    alt="Greeting Card 7" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-4.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/SC-1.png" 
-    alt="Greeting Card 8" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/SC-1.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/SC-2.png" 
-    alt="Greeting Card 9" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/SC-2.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/MD.png" 
-    alt="Greeting Card 10" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/MD.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/HRT-1.png" 
-    alt="Greeting Card 11" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/HRT-1.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/HRT-2.png" 
-    alt="Greeting Card 12" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/HRT-2.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/GR-1.png" 
-    alt="Greeting Card 13" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/GR-1.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/GR-2.png" 
-    alt="Greeting Card 14" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/GR-2.png')"
-  />
-  <img 
-    src="https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/PR-1.jpg" 
-    alt="Greeting Card 15" 
-    class="card-image" 
-    (click)="openLightbox('https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/PR-1.jpg')"
-  />
+  <!-- Venmo Button -->
+<div class="venmo-button-container">
+  <button class="venmo-button" (click)="openVenmo()">Pay with Venmo</button>
 </div>
 
-<div *ngIf="isLightboxOpen" class="lightbox">
-  <img [src]="lightboxImage" alt="Greeting Card">
-  <button class="close-btn" (click)="closeLightbox()">Close</button>
+<!-- Zelle Button -->
+<div class="zelle-button-container">
+  <button class="zelle-button" (click)="openZelleModal()">Pay with Zelle</button>
 </div>
 
+<!-- Zelle Modal -->
+<div *ngIf="isZelleModalOpen" class="zelle-modal">
+  <div class="modal-content">
+    <h2>Pay with Zelle</h2>
+    <p>Send your payment to:</p>
+    <p><strong>Email:</strong> garima.symbiosis&#64;gmail.com</p>
+    <p><strong>Phone:</strong> +1 (424) 237-4273</p>
+    <p>Note: Please include your name and card selection in the payment notes.</p>
+    <button class="close-modal-btn" (click)="closeZelleModal()">Close</button>
+  </div>
+</div> 
 
- -->
+  
+  
+    

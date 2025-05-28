@@ -20,4 +20,10 @@ export class ArtComponent {
     this.isLightboxOpen = false;
     this.lightboxImage = '';
   }
+  openCommissionForm() {
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLSe9xn-LlqGmrKA8haxa6lnEqkcsQL8W46VxRC37TLLGpRpjuQ/viewform?usp=header',
+      '_blank'
+    );
+  }
 }
