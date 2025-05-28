@@ -13,9 +13,14 @@
         (click)="openLightbox(card.image)"
       />
        <!-- Card Code Label -->
-    <div class="card-label">{{ card.code }}</div>
+  <div 
+    class="card-label" 
+    [ngClass]="{'premium-code': card.isPremium, 'regular-code': !card.isPremium}">
+    {{ card.code }}
+  </div>
+
        <!-- Premium Tag -->
-      <div *ngIf="card.isPremium" class="premium-tag">Premium</div>
+  <div *ngIf="card.isPremium" class="premium-tag">Premium</div>
     </div>
   </div>
 
