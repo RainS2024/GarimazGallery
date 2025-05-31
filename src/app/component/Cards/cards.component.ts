@@ -65,6 +65,11 @@ export class CardsComponent {
       image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/GR-2.png',
       alt: 'Greeting Card 14', code: 'Graduation-2',isPremium: false,
     },
+  
+    {
+      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/Fathers+Day+Card.jpg',
+      alt: 'Greeting Card 16', code: 'FathersDay',isPremium: false,
+    },
     {
       image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/PR-1.jpg',
       alt: 'Greeting Card 15', code: 'Premium-1',isPremium: true,
