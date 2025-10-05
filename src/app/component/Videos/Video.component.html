@@ -1,0 +1,20 @@
+<div class="video-section">
+  <h1>My YouTube Videos</h1>
+
+  <div class="video-container-grid">
+    <div class="video-card" *ngFor="let video of videos">
+      <iframe 
+        [src]="video.url" 
+        title="{{video.title}}" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <p class="video-title">{{ video.title }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+

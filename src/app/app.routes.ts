@@ -5,6 +5,7 @@ import { ArtComponent } from './component/Art/art.component';
 import { WorkshopComponent } from './component/Workshops/workshop.component';
 import { ClayComponent } from './component/ClayArt/clay.component';
 import { LinksComponent } from './component/Links/links.component';
+import { VideoComponent } from './component/Videos/Video.component';
 
 
 
@@ -15,6 +16,7 @@ export const routes: Routes = [
    { path: 'clayart', component: ClayComponent },
   { path: 'workshops', component: WorkshopComponent },
   { path: 'links', component: LinksComponent },
+  {path: 'videos', component: VideoComponent},
   
   { path: '**', redirectTo: '', pathMatch: 'full' }, // Wildcard route
 ];
