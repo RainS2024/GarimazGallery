@@ -29,10 +29,16 @@ echo "📦 Moving build output..."
 mv $OUTPUT_DIR/browser/* $OUTPUT_DIR/
 rm -rf $OUTPUT_DIR/browser
 
-# 5️⃣ Commit new build
-echo "📝 Committing build..."
-git add $OUTPUT_DIR
-git commit -m "Deploy: updated production build for Garima's Gallery"
+# 5️⃣ Check if there are actual changes
+if git diff --quiet $OUTPUT_DIR; then
+  echo "🟢 No changes detected in $OUTPUT_DIR — skipping commit."
+else
+  echo "📝 Committing build changes..."
+  git add $OUTPUT_DIR
+  git commit -m "Deploy: updated production build for Garima's Gallery"
+  echo "⬆️ Pushing to GitHub..."
+  git push origin $BRANCH
+fi
 
 # 6️⃣ Push to GitHub
 echo "⬆️ Pushing to GitHub..."
@@ -40,3 +46,4 @@ git push origin $BRANCH
 
 echo "✅ Deployment complete!"
 echo "🌐 Check your site: https://www.garimasgallery.com"
+exit 0
