@@ -9,10 +9,11 @@ import { CommonModule } from '@angular/common';
 })
 export class CardsComponent {
  cards = [
-   {
-      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/Raksha_Bandhan.jpg',
-      alt: 'Greeting Card 16', code: 'Festival - Raksha Bandhan',isPremium: true,
+  {
+      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/Fathers+Day+Card.jpg',
+      alt: 'Greeting Card 16', code: 'FathersDay',isPremium: false,
     },
+   
     {
       image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/PR-1.jpg',
       alt: 'Greeting Card 15', code: 'Special Occasion-Marriage',isPremium: true,
@@ -21,22 +22,12 @@ export class CardsComponent {
       image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/SG-1.png',
       alt: 'Greeting Card 1', code: 'ShriGanesh-1',isPremium: false,
     },
-    {
-      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/BD-1.png',
-      alt: 'Greeting Card 2', code: 'Birthday-1',isPremium: false,
-    },
+    
     {
       image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/BD-2.png',
       alt: 'Greeting Card 3', code: 'Birthday-2',isPremium: false,
     },
-    {
-      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-1.png',
-      alt: 'Greeting Card 4', code: 'Flower-1',isPremium: false,
-    },
-    {
-      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-2.png',
-      alt: 'Greeting Card 5', code: 'Flower-2',isPremium: false,
-    },
+   
     {
       image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-3.png',
       alt: 'Greeting Card 6', code: 'Flower-3',isPremium: false,
@@ -73,11 +64,23 @@ export class CardsComponent {
       image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/GR-2.png',
       alt: 'Greeting Card 14', code: 'Graduation-2',isPremium: false,
     },
-  
-    {
-      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/Fathers+Day+Card.jpg',
-      alt: 'Greeting Card 16', code: 'FathersDay',isPremium: false,
+     {
+      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-1.png',
+      alt: 'Greeting Card 4', code: 'Flower-1',isPremium: false,
     },
+    {
+      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/FL-2.png',
+      alt: 'Greeting Card 5', code: 'Flower-2',isPremium: false,
+    },
+  {
+      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/Raksha_Bandhan.jpg',
+      alt: 'Greeting Card 16', code: 'Festival - Raksha Bandhan',isPremium: true,
+    },
+    {
+      image: 'https://garimas-gallery-images.s3.us-west-1.amazonaws.com/Cards/BD-1.png',
+      alt: 'Greeting Card 2', code: 'Birthday-1',isPremium: false,
+    },
+    
     
    
     // Add more card objects here

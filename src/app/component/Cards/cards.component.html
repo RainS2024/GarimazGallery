@@ -1,26 +1,33 @@
 <div class="gallery">
   <h1>Cards Gallery</h1>
   <p>Browse through my collection of unique and creative greeting cards.</p>
+
+  <!-- Action Buttons on Top -->
+  <div class="action-buttons">
+    <button class="order-button" (click)="orderCard()">Order Now</button>
+    <button class="venmo-button" (click)="openVenmo()">Pay with Venmo</button>
+    <button class="zelle-button" (click)="openZelleModal()">Pay with Zelle</button>
+  </div>
+
+  <!-- Card Gallery -->
   <div class="card-container">
-    <!-- Card Item -->
-    <div class="card-item" *ngFor="let card of cards" 
-    [attr.data-tooltip]="getCardPricing(card)">
-       
+    <div class="card-item" *ngFor="let card of cards" [attr.data-tooltip]="getCardPricing(card)">
       <img
         [src]="card.image"
         [alt]="card.alt"
         class="card-image"
         (click)="openLightbox(card.image)"
       />
-       <!-- Card Code Label -->
-  <div 
-    class="card-label" 
-    [ngClass]="{'premium-code': card.isPremium, 'regular-code': !card.isPremium}">
-    {{ card.code }}
-  </div>
+      
+      <!-- Card Code Label -->
+      <div 
+        class="card-label" 
+        [ngClass]="{'premium-code': card.isPremium, 'regular-code': !card.isPremium}">
+        {{ card.code }}
+      </div>
 
-       <!-- Premium Tag -->
-  <div *ngIf="card.isPremium" class="premium-tag">Premium</div>
+      <!-- Premium Tag -->
+      <div *ngIf="card.isPremium" class="premium-tag">Premium</div>
     </div>
   </div>
 
@@ -30,34 +37,15 @@
     <button class="close-btn" (click)="closeLightbox()">Close</button>
   </div>
 
-  <!-- Order Button -->
-  <div class="order-button-container">
-    <button class="order-button" (click)="orderCard()">Order Now</button>
-  </div>
+  <!-- Zelle Modal -->
+  <div *ngIf="isZelleModalOpen" class="zelle-modal">
+    <div class="modal-content">
+      <h2>Pay with Zelle</h2>
+      <p>Send your payment to:</p>
+      <p><strong>Email:</strong> garima.symbiosis&#64;gmail.com</p>
+      <p><strong>Phone:</strong> +1 (424) 237-4273</p>
+      <p>Note: Please include your name and card selection in the payment notes.</p>
+      <button class="close-modal-btn" (click)="closeZelleModal()">Close</button>
+    </div>
+  </div> 
 </div>
-
-  <!-- Venmo Button -->
-<div class="venmo-button-container">
-  <button class="venmo-button" (click)="openVenmo()">Pay with Venmo</button>
-</div>
-
-<!-- Zelle Button -->
-<div class="zelle-button-container">
-  <button class="zelle-button" (click)="openZelleModal()">Pay with Zelle</button>
-</div>
-
-<!-- Zelle Modal -->
-<div *ngIf="isZelleModalOpen" class="zelle-modal">
-  <div class="modal-content">
-    <h2>Pay with Zelle</h2>
-    <p>Send your payment to:</p>
-    <p><strong>Email:</strong> garima.symbiosis&#64;gmail.com</p>
-    <p><strong>Phone:</strong> +1 (424) 237-4273</p>
-    <p>Note: Please include your name and card selection in the payment notes.</p>
-    <button class="close-modal-btn" (click)="closeZelleModal()">Close</button>
-  </div>
-</div> 
-
-  
-  
-    

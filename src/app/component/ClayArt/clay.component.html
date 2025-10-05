@@ -1,6 +1,14 @@
 <div class="clayart">
   <h1>ClayArt</h1>
   <p>"Shaping imagination into reality—explore the magic of my clay art!"</p>
+  <!-- Action Buttons on Top -->
+  <div class="action-buttons">
+    <button class="order-button" (click)="orderItem()">Order Now</button>
+    <button class="venmo-button" (click)="openVenmo()">Pay with Venmo</button>
+    <button class="zelle-button" (click)="openZelleModal()">Pay with Zelle</button>
+  </div>
+  
+  
   <div class="image-container">
 
     <div class="image-item">
@@ -120,21 +128,6 @@
   <button class="close-btn" (click)="closeLightbox()">Close</button>
 </div>
 
-  <!-- Order Button -->
-  <div class="order-button-container">
-    <button class="order-button" (click)="orderItem()">Order Now</button>
-  </div>
-
-
-  <!-- Venmo Button -->
-<div class="venmo-button-container">
-  <button class="venmo-button" (click)="openVenmo()">Pay with Venmo</button>
-</div>
-
-<!-- Zelle Button -->
-<div class="zelle-button-container">
-  <button class="zelle-button" (click)="openZelleModal()">Pay with Zelle</button>
-</div>
 
 <!-- Zelle Modal -->
 <div *ngIf="isZelleModalOpen" class="zelle-modal">
