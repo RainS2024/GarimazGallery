@@ -87,6 +87,12 @@
         ],
         "scripts": []
       }
+    },
+     "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "./deploy.sh"
+      }
     }
   }
 }
